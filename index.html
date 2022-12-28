@@ -6,94 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- Latest compiled JavaScript -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <style>
-        .hostel_id {
-            width: 10%;
-            padding: 2px 91px 4px 3px;
-        }
-
-        .the-border {
-            border: 1px solid #9f9b9b;
-            padding-right: 109px !important;
-        }
-
-        .the-field {
-            margin-bottom: 0px;
-        }
-
-        .field {
-            color: white !important;
-            background: #418bca;
-        }
-
-        .form-label {
-            font-weight: 600;
-        }
-
-        .col-sm-4 {
-            font-weight: 600;
-            color: #282529;
-        }
-
-        .condetion {
-            font-weight: 600;
-            color: #282529;
-        }
-
-        .the-heading {
-            background: #f1f1f1;
-            color: #333333;
-            padding: 5px;
-            font-weight: 600;
-            margin-right: 6px !important;
-            border-bottom: 1px solid #bfbfbf;
-        }
-
-        .link {
-            text-decoration: none;
-            color: white;
-        }
-
-        .link:hover {
-            color: white;
-        }
-
-        .button1 {
-            float: right;
-        }
-
-        .wheather-none {
-            display: none;
-        }
-
-        .the-text-align {
-            padding-bottom: 11px !important;
-            padding-top: 4px !important;
-        }
-
-        /* .error-message {
-            display: none;
-        } */
-        /* .error{
-            color: #dc3545;
-        }
-        .error:empty {
-            display: none !important;
-        }
-        .form-control.error:empty{
-            display: inline-block !important;
-        } */
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>New Hostel</title>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="validation.js"></script>
 </head>
 
 <body class="p-2">
@@ -106,24 +27,8 @@
             <option value="1">012345</option>
             <option value="1">852369</option>
         </select>
-        <!-- <button type="button" class="btn btn-primary p-2 mb-1" id="show">Show</button> -->
         <span id="hostel_id_message"></span>
         <div id="new_hostel" class="" style="display:none;">
-
-            <!-- <body class="p-2"> -->
-            <!-- <form action="" class="container-fluid p-2 text-bg-secondary w-25"> -->
-            <!-- <div class="container-fluid">
-                    <label for="Hostel_id">Hostel ID:- </label>
-                    <input type="text" name="Hostel_id" id="Hostel_id" placeholder="Hostel ID">
-                    <button type="button" class="btn btn-primary btn-sm mb-1">Show</button>
-                    <button type="button" class="btn btn-secondary btn-sm mb-1">Reset</button>
-                </div> -->
-            <!-- <div class="show_hostel_id">
-                <label for="show_hostel_id" class="fw-bold">Hostel id:</label>
-                <span class="alert alert-success hostel_id">
-                    012345
-                </span>
-            </div> -->
             <div class="container-fluid row g-3 p-4 bg-white shadow-sm">
                 <fieldset class="the-border p-2 w-100">
                     <legend class="float-none w-auto p-3 field the-text-align"><small>Demographic Information For
@@ -139,7 +44,6 @@
                                         <input id="state" name="state" type="text" placeholder="Uttar Pradesh"
                                             minlength="10" maxlength="200" class="form-control" value="" required=""
                                             aria-required="true" readonly>
-                                        <!-- <label for="state" class="col-sm-10 control-label">Uttar Pradesh</label> -->
                                     </div>
 
                                 </div>
@@ -154,13 +58,10 @@
                                         <input id="district" name="district" type="text" placeholder="Aligarh"
                                             minlength="10" maxlength="200" class="form-control " value="" required=""
                                             aria-required="true" readonly>
-                                        <!-- <label for="district">Aligarh</label> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- </div>
-                        <div class="row mb-4"> -->
                         <div class="col-md-3">
                             <div class="form-group">
                                 <div class="row">
@@ -171,7 +72,6 @@
                                         <input id="area_type" name="area_type" type="text" placeholder="Rural"
                                             minlength="10" maxlength="200" class="form-control the-box-size " value=""
                                             required="" aria-required="true" readonly>
-                                        <!-- <label for="area_type" class="col-sm-10 control-label">Rural</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +84,6 @@
                                         <input id="block" name="block" type="text" placeholder="Atrauli" minlength="10"
                                             maxlength="200" class="form-control " value="" required=""
                                             aria-required="true" readonly>
-                                        <!-- <label for="block" class="col-sm-10 control-label">Atrauli</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +100,6 @@
                                         <input id="gram_panchayat" name="gram_panchayat" type="text"
                                             placeholder="Jirauli Dhoom Singh" minlength="10" maxlength="200"
                                             class="form-control" value="" required="" aria-required="true" readonly>
-                                        <!-- <label for="gram_panchayat">Jirauli Dhoom Singh</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -214,13 +112,10 @@
                                         <input id="village" name="village" type="text" placeholder="Jirauli Dhoom Singh"
                                             minlength="10" maxlength="200" class="form-control " value="" required=""
                                             aria-required="true" readonly>
-                                        <!-- <label for="Village">Jirauli Dhoom Singh</label> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- </div> -->
-                        <!-- <div class="row mb-4"> -->
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="row">
@@ -232,26 +127,10 @@
                                             placeholder="Jirauli Dhoom Singh, Atrauli, Aligarh, (U.P.), 202281"
                                             minlength="10" maxlength="2000" class="form-control w-100 " value=""
                                             required="" aria-required="true" readonly>
-                                        <!-- <label for="address" class="col-sm-10 control-label">Jirauli Dhoom Singh,
-                                            Atrauli,
-                                            Aligarh, (U.P.)</label> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-md-3">
-                                <div class="form-group">
-                                    <div class="row">
-                                        <label for="group" class="col-sm-4 control-label fw-bold">Pin Code:</label>
-                                        <div class="col-sm-8">
-                                            <input id="pin_code" name="pin_code" type="text" placeholder="Pin Code" minlength="10"
-                                                maxlength="200" class="form-control " value="" required="" aria-required="true"
-                                                disabled>
-                                            <label for="pin_code" class="col-sm-10 control-label">202281</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                     </div>
                 </fieldset>
                 
@@ -271,7 +150,6 @@
                                         <input id="sanctioned_inmates" name="sanctioned_inmates" type="text"
                                             placeholder="5" minlength="10" maxlength="200" class="form-control "
                                             value="" required="" aria-required="true" disabled>
-                                        <!-- <label for="no._of_sanctioned" class="col-sm-10 control-label">5</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -286,7 +164,6 @@
                                         <input id="financial_year_sanction" name="financial_year_sanction" type="text"
                                             placeholder="2021-2022" minlength="10" maxlength="200"
                                             class="form-control " value="" required="" aria-required="true" disabled>
-                                        <!-- <label for="fin_year_of_sanctioned" class="col-sm-6 control-label">2021-2022</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -302,7 +179,6 @@
                                         <input id="project_cost" name="project_cost" type="text" placeholder="50"
                                             minlength="10" maxlength="200" class="form-control project-size " value=""
                                             required="" aria-required="true" disabled>
-                                        <!-- <label for="total_project_cost" class="col-sm-6 control-label">50 lakhs</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +194,6 @@
                                         <input id="approved_cenral_cost" class="form-control" name="approved_cenral_cost" type="text"
                                             placeholder="10" minlength="10" maxlength="200" value="" required=""
                                             aria-required="true" disabled>
-                                        <!-- <label for="approved_central_assiatance">10 lakhs</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -333,7 +208,6 @@
                                         <input id="sanction_no" name="sanction_no" type="text" placeholder="2469725"
                                             minlength="10" maxlength="200" class="form-control " value="" required=""
                                             aria-required="true" disabled>
-                                        <!-- <label for="sanction_no.">2469725</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -348,7 +222,6 @@
                                         <input id="date_of_sanction" name="date_of_sanction" type="text"
                                             placeholder="10/01/2022" minlength="10" maxlength="200"
                                             class="form-control " value="" required="" aria-required="true" disabled>
-                                        <!-- <label for="date_of_sanction">10/01/2022</label> -->
                                     </div>
                                 </div>
                             </div>
@@ -390,10 +263,9 @@
                 <!-- <section class="container-fluid row g-3 p-3 bg-white shadow-sm"> -->
                 <form class="p-0 w-100" id="non_completion_form">
                     <fieldset class="the-border p-2 mt-3 w-100">
-                        <legend class="float-none w-auto p-2 field the-text-align"><small>Financial Progress
-                                Report</small>
+                        <legend class="float-none w-auto p-2 field the-text-align"><small>Progress Report</small>
                         </legend>
-                        <label class="form-label font-weight-bold" for="central_assistance">Actual amount utilized
+                        <label class="form-label font-weight-bold" for="central_assistance">Amount utilized
                         </label>
                         <div class="row ml-2">
                             <!-- <label class="form-label font-weight-bold" for="central_assistance">Actual amount utilized
@@ -434,10 +306,6 @@
                             up
                             to31st March, i.e. year ending</label>
                         <div class="row ml-2">
-                            <!-- <label class="form-label font-weight-bold" for="central_assistance">Unspent balance of central
-                                assistance
-                                up
-                                to31st March, i.e. year ending<span>*</span></label> -->
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="row">
@@ -475,71 +343,10 @@
                                 <input type="checkbox" class="form-check-input ml-2" id="form-check-hostel" for="form-check-hostel">
                             </label>
                         </div>
-                        <!-- <input type="radio" class="ml-4" name="condetion" id="yes">
-                        <label class="sm-3 font-weight-bold" for="Yes">Yes</label>
-                        <input type="radio" name="condetion" id="no" checked>
-                        <label class="sm-3 font-weight-bold" for="No">No</label>
-                        <span class="m-1 error-message text-danger" id="girls_hostel_message"></span> -->
-                    </fieldset>
-                    <div class="chkHostel" style="display: none ">
-                        <fieldset class="the-border p-2 mt-3 w-100">
-                            <legend class="float-none w-auto p-2 field the-text-align"><small>Physical Progress
-                                    Report</small></legend>
-                            <div class="row">
-                                <div class="col-md-6">
+                        <div class="col-md-6 chkHostel" style="display: none;">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Financial
-                                                Year<span class="text-danger">*</span></label>
-                                            <div class="col-sm-6">
-                                                <select id="financial_year" class="form-control">
-                                                    <!-- <option selected>Financial Year</option> -->
-                                                    <option value="2018-2019">2018-2019</option>
-                                                    <option value="2019-2020">2019-2020</option>
-                                                    <option value="2020-2021">2020-2021</option>
-                                                    <option value="2021-2022">2021-2022</option>
-                                                    <option value="2022-2023">2022-2023</option>
-                                                </select>
-                                                <span class="m-1 error-message text-danger"
-                                                    id="financial_year_message"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <label class="form-label font-weight-bold" for="whether_condetion">Whether
-                                            Completed
-                                        </label>
-                                        <input type="radio" name="wheather_condetion" checked id="Yes">
-                                        <label class="sm-3 font-weight-bold" for="Yes">Yes</label>
-                                        <input type="radio" name="wheather_condetion" id="No">
-                                        <label class="sm-3 font-weight-bold" for="No">No</label>
-                                        <span class="m-1 error-message text-danger"
-                                            id="wheather_completed_message"></span>
-                                    </div>
-                                    <!-- <div class="form-group">
-                                    <div class="row">
-                                        <label for="group" class="col-sm-6 control-label font-weight-bold">Wheather Completed<span class="text-danger">*</span></label>
-                                        <div class="col-sm-6">
-                                            <select class="form-control">
-                                                <option selected id="yes" value="yes" for="yes" name="wheather_condetion">yes</option>
-                                                <option class="no" value="NO" for="no" name="wheather_condetion">No</option>
-                                            </select>
-                                            <span class="m-1 error-message text-danger" id="wheather_completed_message"></span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 wheather-yes">
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">If
-                                                Completed,
-                                                date of
-                                                completion<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Construction Status<span class="text-danger">*</span></label>
                                             <div class="col-sm-6">
                                                 <input id="date_of_completion" name="date_of_completion" type="text" placeholder="Date of Completion" class="form-control datepicker-4">
                                                 <span class="m-1 error-message text-danger"
@@ -548,67 +355,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 wheather-none">
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">If not
-                                                Completed,
-                                                status
-                                                of
-                                                construction
-                                                Share<span class="text-danger">*</span></label>
-                                            <div class="col-sm-6">
-                                                <input id="status_of_construction" name="status_of_construction."
-                                                    type="text" placeholder="Status of Construction"
-                                                    class="form-control ">
-                                                <span class="m-1 error-message text-danger"
-                                                    id="status_of_construction_message"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 wheather-none">
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Expected
-                                                date
-                                                of
-                                                Completion<span class="text-danger">*</span></label>
-                                            <div class="col-sm-6">
-                                                <input id="expected_date_of_completion" name="expected_date_of_completion" type="text" placeholder="Date of Completion" class="form-control datepicker-5">
-                                                <span class="m-1 error-message text-danger"
-                                                    id="expected_date_of_completion_message"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 wheather-none">
-                                    <div class="form-group">
-                                        <div class="row">
-                                                <label for="group"
-                                                    class="col-sm-6 control-label font-weight-bold">Reasons
-                                                    for
-                                                    non-completion<span class="text-danger">*</span></label>
-                                                <div class="col-sm-6">
-                                                    <input id="non_completion" name="non_completion" type="text"
-                                                        placeholder="Reasons for non-completion" class="form-control ">
-                                                    <span class="m-1 error-message text-danger"
-                                                        id="non_completion_message"></span>
-                                                    <span class="m-1 eroor-message text-danger" id=""
-                                                        warning-message></span>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </fieldset>
+                    </fieldset>
+                    <div class="chkHostel" style="display: none ">
                          <fieldset class="the-border p-2 mt-3 w-100">
                             <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earn whether the 1st intrest Return to Government of India</small></legend>
                             <div class="row">
                                 <div class="col-12">
                                     <div>
-                                        <label class="form-label font-weight-bold" for="government_of_india">Whether Return Government of India
+                                        <label class="form-label font-weight-bold" for="government_of_india">Whether Returned Government of India
                                         </label>
                                         <input type="radio" name="government_of_india" checked id="W-Yes">
                                         <label class="sm-3 font-weight-bold" for="W-Yes">Yes</label>
@@ -617,18 +371,6 @@
                                         <span class="m-1 error-message text-danger"
                                             id="government_of_india_message"></span>
                                     </div>
-                                    <!-- <div class="form-group">
-                                    <div class="row">
-                                        <label for="group" class="col-sm-6 control-label font-weight-bold">Wheather Completed<span class="text-danger">*</span></label>
-                                        <div class="col-sm-6">
-                                            <select class="form-control">
-                                                <option selected id="yes" value="yes" for="yes" name="wheather_condetion">yes</option>
-                                                <option class="no" value="NO" for="no" name="wheather_condetion">No</option>
-                                            </select>
-                                            <span class="m-1 error-message text-danger" id="wheather_completed_message"></span>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 </div>
                                 <div class="wheather-return-input row col-12"> 
                                 <div class="col-md-6">
@@ -636,7 +378,7 @@
                                         <div class="row">
                                             <label for="group" class="col-sm-6 control-label font-weight-bold">Amount (in Rs)<span class="text-danger">*</span></label>
                                             <div class="col-sm-6">
-                                                <input id="amount" name="amount" type="text" placeholder="Amount" class="form-control ">
+                                                <input id="amount" name="amount" type="number" placeholder="Amount" class="form-control ">
                                                 <span class="m-1 error-message text-danger"
                                                     id="financial_year_message"></span>
                                             </div>
@@ -646,10 +388,10 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Cheque Number<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Mode of Return & Details<span class="text-danger">*</span></label>
                                             <div class="col-sm-6">
                                                 <input id="cheque_no" name="cheque_no" type="text"
-                                                    placeholder="Cheque Number" class="form-control ">
+                                                    placeholder="Mode of return & Details" class="form-control ">
                                                     <span class="text-danger"> <small>Document need to uploaded in  8th uploded section</small></span>
                                                 <span class="m-1 error-message text-danger"
                                                     id="cheque_no_message"></span>
@@ -891,520 +633,8 @@
                         <button type="button" id="save" class="btn btn-success mt-2" name="save">Save</button>
                     </div>
                 </form>
-                <!-- </section> -->
             </div>
-            <!-- </div> -->
         </div>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script> -->
-        <script>
-
-            $(document).ready(function () {
-                $('#hostel_id').on('change', function () {
-                    if (this.value == '1') {
-                        $("#new_hostel").show();
-                    }
-                    else {
-                        $("#new_hostel").hide();
-                    }
-                });
-            });
-            $(document).ready(function () {
-                $("#form-check-hostel").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".chkHostel").show();
-                        // $(".wheather-none").hide();
-                    } else {
-                        $(".chkHostel").hide();
-                    }
-                });
-            });
-            $.validator.setDefaults({
-                debug: true,
-                success: "valid"
-            });
-            $("#non_completion_form").validate({
-                rules: {
-                    non_completion: {
-                        required: true,
-                        maxlength: 100,
-                        minlength: 10
-                    }
-                }
-            });
-
-            $(document).ready(function () {
-                // $("#form-check-hostel").click(function () {
-                //     var hostel = $("#actual_amt_Central_share");
-                //     if (hostel.val() === "") {
-                //         document.getElementById("actual_amt_share_message").innerHTML = "Central Share can not be empty";
-                //         document.getElementById("actual_amt_share_message").style.display = "block";
-                //     }
-                //     else {
-                //         document.getElementById("actual_amt_share_message").innerHTML = "";
-                //     }
-                // });
-
-                $("#show").click(function () {
-                    var hostel = $("#hostel_id");
-                    if (hostel.val() === "") {
-                        document.getElementById("hostel_id_message").innerHTML = "Hostel Id Can't be empty";
-                        document.getElementById("hostel_id_message").style.color = "red";
-                        document.getElementById("hostel_id_message").style.margin = "20px";
-                    }
-                    else {
-                        document.getElementById("hostel_id_message").innerHTML = "pass";
-                        document.getElementById("hostel_id_message").style.color = "green";
-                    }
-                });
-                $("#save").click(function () {
-                    var hostel = $("#actual_amt_Central_share");
-                    if (hostel.val() === "") {
-                        document.getElementById("actual_amt_share_message").innerHTML = "Central Share can not be empty";
-                        document.getElementById("actual_amt_share_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("actual_amt_share_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var village = $("#central_assis_State_uni");
-                    if (village.val() === "") {
-                        document.getElementById("central_assis_State_uni_message").innerHTML = "State/University can not be Empty";
-                        document.getElementById("central_assis_State_uni_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("central_assis_State_uni_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var village = $("#unspent_balance_of_central_share");
-                    if (village.val() === "") {
-                        document.getElementById("unspent_balance_of_central_share_message").innerHTML = "Central Share  can not be Empty";
-                        document.getElementById("unspent_balance_of_central_share_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("unspent_balance_of_central_share_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var village = $("#state_uni");
-                    if (village.val() === "") {
-                        document.getElementById("state_uni_message").innerHTML = " State/University can not be Empty";
-                        document.getElementById("state_uni_message").style.width = "100%";
-                        document.getElementById("state_uni_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("state_uni_message").innerHTML = "";
-                    }
-                });
-
-                // $("#save").click(function () {
-                //     var selectedgirlshostel = $("input[name='condetion']:checked").val();
-                //     if (selectedgirlshostel) {
-                //         document.getElementById("girls_hostel_message").innerHTML = "";
-                //     }
-                //     else {
-                //         document.getElementById("girls_hostel_message").innerHTML = "Choose Yes or No";
-                //         document.getElementById("girls_hostel_message").style.display = "block";
-                //     }
-                // });
-                // $("#save").click(function () {
-                //     var wheather_completed = $("input[name='wheather_condetion']:checked").val();
-                //     if (wheather_completed) {
-                //         document.getElementById("wheather_completed_message").innerHTML = "";
-                //     }
-                //     else {
-                //         document.getElementById("wheather_completed_message").innerHTML = "Choose Category";
-                //         document.getElementById("wheather_completed_message").style.display = "block";
-                //     }
-                // });
-                $("#save").click(function () {
-                    var financial_year = $("#financial_year");
-                    if (financial_year.val() === "") {
-                        document.getElementById("financial_year_message").innerHTML = "Financial Year can not be Empty";
-                        document.getElementById("financial_year_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("financial_year_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var date_of_completion = $("#date_of_completion");
-                    if (date_of_completion.val() === "") {
-                        document.getElementById("date_of_completion_message").innerHTML = "Date of Completion can not be Empty";
-                        document.getElementById("date_of_completion_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("date_of_completion_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var expected_date_of_completion = $("#expected_date_of_completion");
-                    if (expected_date_of_completion.val() === "") {
-                        document.getElementById("expected_date_of_completion_message").innerHTML = "Expected date of Completion can not be Empty";
-                        document.getElementById("expected_date_of_completion_message").style.color = "red";
-                        document.getElementById("expected_date_of_completion_message").style.margin = "20px";
-                        document.getElementById("expected_date_of_completion_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("expected_date_of_completion_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var status_of_construction = $("#status_of_construction");
-                    if (status_of_construction.val() === "") {
-                        document.getElementById("status_of_construction_message").innerHTML = "Status of Construction can not be Empty";
-                        document.getElementById("status_of_construction_message").style.color = "red";
-                        document.getElementById("status_of_construction_message").style.margin = "20px";
-                        document.getElementById("status_of_construction_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("status_of_construction_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var non_completion = $("#non_completion");
-                    if (non_completion.val() === "") {
-                        document.getElementById("non_completion_message").innerHTML = "Non-Completion Reasons can not be Empty";
-                        document.getElementById("non_completion_message").style.color = "red";
-                        document.getElementById("non_completion_message").style.margin = "20px";
-                        document.getElementById("non_completion_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("non_completion_message").innerHTML = "";
-                    }
-                });
-                $("#save").click(function () {
-                    var sanction_letter = $("#sanction_letter");
-                    if (sanction_letter.val() === "") {
-                        document.getElementById("sanction_letter_message").innerHTML = "Utilization Certificate can not be Empty";
-                        document.getElementById("sanction_letter_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("sanction_letter_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#sanction_letter').on('change', function () {
-                    myFile = $("#sanction_letter").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-
-                $("#save").click(function () {
-                    var audit_report = $("#audit_report");
-                    if (audit_report.val() === "") {
-                        document.getElementById("audit_report_message").innerHTML = "Audit Report can not be Empty";
-                        document.getElementById("audit_report_message").style.color = "red";
-                        document.getElementById("audit_report_message").style.margin = "20px";
-                        document.getElementById("audit_report_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("audit_report_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#audit_report').on('change', function () {
-
-                    myFile = $("#audit_report").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var balance_sheet = $("#balance_sheet");
-                    if (balance_sheet.val() === "") {
-                        document.getElementById("balance_sheet_message").innerHTML = "Balance Sheet can not be Empty";
-                        document.getElementById("balance_sheet_message").style.color = "red";
-                        document.getElementById("balance_sheet_message").style.margin = "20px";
-                        document.getElementById("balance_sheet_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("balance_sheet_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#balance_sheet').on('change', function () {
-
-                    myFile = $("#balance_sheet").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var income_expenditure = $("#income_expenditure");
-                    if (income_expenditure.val() === "") {
-                        document.getElementById("income_expenditure_message").innerHTML = "Income Expenditure can not be Empty";
-                        document.getElementById("income_expenditure_message").style.color = "red";
-                        document.getElementById("income_expenditure_message").style.margin = "20px";
-                        document.getElementById("income_expenditure_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("income_expenditure_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#income_expenditure').on('change', function () {
-
-                    myFile = $("#income_expenditure").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var receipt_of_payment = $("#receipt_of_payment");
-                    if (receipt_of_payment.val() === "") {
-                        document.getElementById("receipt_of_payment_message").innerHTML = "Receipt of Payment can not be Empty";
-                        document.getElementById("receipt_of_payment_message").style.color = "red";
-                        document.getElementById("receipt_of_payment_message").style.margin = "20px";
-                        document.getElementById("receipt_of_payment_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("receipt_of_payment_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#receipt_of_payment').on('change', function () {
-
-                    myFile = $("#receipt_of_payment").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var bank_statement = $("#bank_statement");
-                    if (bank_statement.val() === "") {
-                        document.getElementById("bank_statement_message").innerHTML = "Bank Statement can not be Empty";
-                        document.getElementById("bank_statement_message").style.color = "red";
-                        document.getElementById("bank_statement_message").style.margin = "20px";
-                        document.getElementById("bank_statement_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("bank_statement_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#bank_statement').on('change', function () {
-
-                    myFile = $("#bank_statement").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var details_of_intrest_earn = $("#details_of_intrest_earn");
-                    if (details_of_intrest_earn.val() === "") {
-                        document.getElementById("details_of_intrest_earn_message").innerHTML = "Details of Interest can not be Empty";
-                        document.getElementById("details_of_intrest_earn_message").style.color = "red";
-                        document.getElementById("details_of_intrest_earn_message").style.margin = "20px";
-                        document.getElementById("details_of_intrest_earn_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("details_of_intrest_earn_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#details_of_intrest_earn').on('change', function () {
-
-                    myFile = $("#details_of_intrest_earn").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var status_of_utilization = $("#status_of_utilization");
-                    if (status_of_utilization.val() === "") {
-                        document.getElementById("status_of_utilization_message").innerHTML = "Status of Utilization can not be Empty";
-                        document.getElementById("status_of_utilization_message").style.color = "red";
-                        document.getElementById("status_of_utilization_message").style.margin = "20px";
-                        document.getElementById("status_of_utilization_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("income_expenditure_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#status_of_utilization').on('change', function () {
-
-                    myFile = $("#status_of_utilization").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var site_inspection_report = $("#site_inspection_report");
-                    if (site_inspection_report.val() === "") {
-                        document.getElementById("site_inspection_report_message").innerHTML = "Site Inspection Report can not be Empty";
-                        document.getElementById("site_inspection_report_message").style.color = "red";
-                        document.getElementById("site_inspection_report_message").style.margin = "20px";
-                        document.getElementById("site_inspection_report_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("site_inspection_report_message").innerHTML = "";
-                    }
-                });
-                var myFile = "";
-                $('#site_inspection_report').on('change', function () {
-
-                    myFile = $("#site_inspection_report").val();
-                    // console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                });
-                $("#save").click(function () {
-                    var color_photographs_of_project = $("#color_photographs_of_project");
-                    if (color_photographs_of_project.val() === "") {
-                        document.getElementById("color_photographs_of_project_message").innerHTML = "Color Photographs can not be Empty";
-                        document.getElementById("color_photographs_of_project_message").style.color = "red";
-                        document.getElementById("color_photographs_of_project_message").style.margin = "20px";
-                        document.getElementById("color_photographs_of_project_message").style.display = "block";
-                    }
-                    else {
-                        document.getElementById("color_photographs_of_project_message").innerHTML = "pass";
-                    }
-                });
-                var myFile = "";
-                $('#color_photographs_of_project').on('change', function () {
-
-                    myFile = $("#color_photographs_of_project").val();
-                    console.log(myFile);
-                    var upld = myFile.split('.').pop();
-                    if (upld == 'pdf') {
-                        // alert("File uploaded is pdf")
-                    } else {
-                        alert("Only PDF are allowed")
-                    }
-                    if (this.files[0].size > 5242880) {
-                        alert("Please upload pdf file less than 5MB ....");
-                        $(this).val('');
-                    }
-
-                })
-            });
-
-            $(document).ready(function () {
-                $("#Yes").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".wheather-yes").show();
-                        $(".wheather-none").hide();
-                    } else {
-                        $(".wheather-none").hide();
-                    }
-                });
-                $("#No").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".wheather-none").show();
-                        $(".wheather-yes").hide();
-                    } else {
-                        $(".wheather-yes").hide();
-                    }
-                });
-            });
-            $(document).ready(function () {
-                $("#W-Yes").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".wheather-return-input").show();
-                    } else {
-                        $(".wheather-return-input").hide();
-                    }
-                });
-                $("#W-No").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".wheather-return-input").hide();
-                    } else {
-                        $(".wheather-return-input").show();
-                    }
-                });
-            });
-
-        </script>
 </body>
 
 </html>

@@ -1,0 +1,63 @@
+.hostel_id {
+    width: 10%;
+    padding: 2px 91px 4px 3px;
+}
+
+.the-border {
+    border: 1px solid #9f9b9b;
+    padding-right: 109px !important;
+}
+
+.the-field {
+    margin-bottom: 0px;
+}
+
+.field {
+    color: white !important;
+    background: #418bca;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.col-sm-4 {
+    font-weight: 600;
+    color: #282529;
+}
+
+.condetion {
+    font-weight: 600;
+    color: #282529;
+}
+
+.the-heading {
+    background: #f1f1f1;
+    color: #333333;
+    padding: 5px;
+    font-weight: 600;
+    margin-right: 6px !important;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    color: white;
+}
+
+.button1 {
+    float: right;
+}
+
+.wheather-none {
+    display: none;
+}
+
+.the-text-align {
+    padding-bottom: 11px !important;
+    padding-top: 4px !important;
+}
