@@ -402,19 +402,19 @@ $(document).ready(function () {
         }
     });
 });
-$(document).ready(function () {
-    $("#W-Yes").click(function () {
-        if ($(this).is(":checked")) {
-            $(".wheather-return-input").show();
-        } else {
-            $(".wheather-return-input").hide();
-        }
-    });
-    $("#W-No").click(function () {
-        if ($(this).is(":checked")) {
-            $(".wheather-return-input").hide();
-        } else {
-            $(".wheather-return-input").show();
-        }
-    });
-});
+// $(document).ready(function () {
+//     $("#W-Yes").click(function () {
+//         if ($(this).is(":checked")) {
+//             $(".wheather-return-input").show();
+//         } else {
+//             $(".wheather-return-input").hide();
+//         }
+//     });
+//     $("#W-No").click(function () {
+//         if ($(this).is(":checked")) {
+//             $(".wheather-return-input").hide();
+//         } else {
+//             $(".wheather-return-input").show();
+//         }
+//     });
+// });

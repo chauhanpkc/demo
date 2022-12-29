@@ -353,15 +353,15 @@
                                 
                     </fieldset>
                     <div class="form-check mt-4">
-                        <label class="form-label font-weight-bold" for="Condetion">Whether necessary provision of fund has been  made for salary and other expenses related to deployment of wardens and guards for the hostel in case of girls hostel?
-                            <input type="checkbox" class="form-check-input ml-2" id="form-check-hostel" for="form-check-hostel">
-                        </label>
+                        <label class="form-label font-weight-bold" for="Condetion">Whether necessary provision of fund has been  made for salary and other expenses related to deployment of wardens and guards for the hostel in case of girls hostel? </label>
+                            <input type="radio" class="font-weight-bold ml-2" id="form-check-hostel" for="form-check-hostel" name="whether_condetion"> Yes
+                            <input type="radio" class="font-weight-bold ml-2" id="form-check-hostel" for="form-check-hostel" name="whether_condetion"> No
                     </div>
                     <div class="">
                          <fieldset class="the-border p-2 mt-3 w-100">
                             <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earned on central share</small></legend>
                             <div class="row">
-                                <div class="col-12">
+                                <!-- <div class="col-12">
                                     <div>
                                         <label class="form-label font-weight-bold" for="government_of_india">Whether Interest Returned Government of India
                                         </label>
@@ -372,7 +372,7 @@
                                         <span class="m-1 error-message text-danger"
                                             id="government_of_india_message"></span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="wheather-return-input row col-12"> 
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -427,18 +427,12 @@
                         </div>
                         </fieldset>
                         <fieldset class="the-border p-2 mt-3 w-100">
-                            <legend class="float-none w-auto p-2 field the-text-align"><small>List of Documents to be
-                                    submitted along
-                                    with
-                                    the
-                                    proposal for release of 2<sup>nd</sup> installment</small></legend>
+                            <legend class="float-none w-auto p-2 field the-text-align"><small>List of Documents to be submitted along with the proposal for release of 2<sup>nd</sup> installment</small></legend>
                             <div class="row mb-2">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">1. Audit  reports since 1<sup>st</sup> installment
-                                                released (in case of Central/State
-                                                University/Institution<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">1. Audit  reports since 1<sup>st</sup> installment released (in case of Central/State University/Institution<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="audit_report" name="audit_report" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -454,13 +448,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">2.
-                                                Balance
-                                                sheet since
-                                                1<sup>st</sup>
-                                                installment
-                                                released (in case of Central/State
-                                                University/Institution)<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">2. Balance sheet since 1<sup>st</sup> installment released (in case of Central/State University/Institution)<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="balance_sheet" name="balance_sheet" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -475,12 +463,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">3. Income
-                                                expenditure
-                                                statement
-                                                since
-                                                1<sup>st</sup> installment released (in case ofCentral/State
-                                                University/Institution)<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">3. Income expenditure statement since 1<sup>st</sup> installment released (in case ofCentral/State University/Institution)<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="income_expenditure" name="income_expenditure" type="file"
                                                     class="form-control-file border" accept="application/pdf">
@@ -495,12 +478,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">4.
-                                                Receipt of
-                                                payment
-                                                since
-                                                1<sup>st</sup> installment released (in case of Central/State
-                                                University/Institution)<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">4.Receipt of payment since 1<sup>st</sup> installment released (in case of Central/State University/Institution)<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="receipt_of_payment" name="receipt_of_payment" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -512,14 +490,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-md-6">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">7. Bank
-                                                Statement
-                                                since
-                                                release of
-                                                1<sup>st</sup> installment<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">5. Bank Statement since release of 1<sup>st</sup> installment<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="bank_statement" name="bank_statement" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -534,7 +508,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">8.Upload document related to refund of interest earned on central share<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">6.Document related to refund of interest earned on central share<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="details_of_intrest_earn" name="details_of_intrest_earn"
                                                     type="file" class="form-control-file border "
@@ -550,13 +524,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">9. Status
-                                                of
-                                                utilization
-                                                of
-                                                matching
-                                                share by the implementing agency, if any<span
-                                                    class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">7. Status of utilization of matching share by the implementing agency, if any<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="status_of_utilization" name="status_of_utilization"
                                                     type="file" class="form-control-file border "
@@ -572,7 +540,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">10. Site inspection report duly signed by competent authority<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">8. Site inspection report duly signed by competent authority<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="site_inspection_report" name="site_inspection_report"
                                                     type="file" class="form-control-file border " value=""
@@ -588,12 +556,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">11.
-                                                Colour
-                                                Photographs
-                                                of
-                                                project
-                                                site<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">9. Colour Photographs of project site<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="color_photographs_of_project"
                                                     name="color_photographs_of_project" type="file"
@@ -605,7 +568,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </fieldset>
                     </div>
@@ -940,15 +903,15 @@
                                 
                     </fieldset>
                     <div class="form-check mt-4">
-                        <label class="form-label font-weight-bold" for="Condetion">Whether necessary provision of fund has been  made for salary and other expenses related to deployment of wardens and guards for the hostel in case of girls hostel?
-                            <input type="checkbox" class="form-check-input ml-2" id="form-check-hostel" for="form-check-hostel">
-                        </label>
+                        <label class="form-label font-weight-bold" for="Condetion">Whether necessary provision of fund has been  made for salary and other expenses related to deployment of wardens and guards for the hostel in case of girls hostel? </label>
+                            <input type="radio" class="font-weight-bold ml-2" id="form-check-hostel" for="form-check-hostel" name="whether_condetion"> Yes
+                            <input type="radio" class="font-weight-bold ml-2" id="form-check-hostel" for="form-check-hostel" name="whether_condetion"> No
                     </div>
                     <div class="">
                          <fieldset class="the-border p-2 mt-3 w-100">
                             <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earned on central share</small></legend>
                             <div class="row">
-                                <div class="col-12">
+                                <!-- <div class="col-12">
                                     <div>
                                         <label class="form-label font-weight-bold" for="government_of_india">Whether Interest Returned Government of India
                                         </label>
@@ -959,14 +922,14 @@
                                         <span class="m-1 error-message text-danger"
                                             id="government_of_india_message"></span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="wheather-return-input row col-12"> 
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Total Interest Earn<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Total Interest Earned<span class="text-danger">*</span></label>
                                             <div class="col-sm-6">
-                                                <input id="amount" name="amount" type="number" placeholder="Total Interest Earn" class="form-control ">
+                                                <input id="amount" name="amount" type="number" placeholder="Total Interest Earned (in Rs.)" class="form-control ">
                                                 <span class="m-1 error-message text-danger"
                                                     id="financial_year_message"></span>
                                             </div>
