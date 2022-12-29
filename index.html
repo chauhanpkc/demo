@@ -359,7 +359,7 @@
                     </div>
                     <div class="">
                          <fieldset class="the-border p-2 mt-3 w-100">
-                            <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earned on central share</small></legend>
+                            <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earned on central share (in Rs.)</small></legend>
                             <div class="row">
                                 <!-- <div class="col-12">
                                     <div>
@@ -432,7 +432,22 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">1. Audit  reports since 1<sup>st</sup> installment released (in case of Central/State University/Institution<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">1. Utilization Certificate as per format mentioned in sanction letter<span class="text-danger">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input id="sanction_letter" name="sanction_letter" type="file"
+                                                    class="form-control-file border " accept="application/pdf">
+                                                <span class="text-danger"><small> (Allow pdf and max file size 5MB
+                                                        only)</small></span><br>
+                                                <span class="m-1 error-message text-danger"
+                                                    id="sanction_letter_message"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">2. Audit  reports since 1<sup>st</sup> installment released (in case of Central/State University/Institution<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="audit_report" name="audit_report" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -448,7 +463,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">2. Balance sheet since 1<sup>st</sup> installment released (in case of Central/State University/Institution)<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">3. Balance sheet since 1<sup>st</sup> installment released (in case of Central/State University/Institution)<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="balance_sheet" name="balance_sheet" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -463,7 +478,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">3. Income expenditure statement since 1<sup>st</sup> installment released (in case ofCentral/State University/Institution)<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">4. Income expenditure statement since 1<sup>st</sup> installment released (in case ofCentral/State University/Institution)<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="income_expenditure" name="income_expenditure" type="file"
                                                     class="form-control-file border" accept="application/pdf">
@@ -478,7 +493,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">4.Receipt of payment since 1<sup>st</sup> installment released (in case of Central/State University/Institution)<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">5.Receipt of payment since 1<sup>st</sup> installment released (in case of Central/State University/Institution)<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="receipt_of_payment" name="receipt_of_payment" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -493,7 +508,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">5. Bank Statement since release of 1<sup>st</sup> installment<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">6. Bank Statement since release of 1<sup>st</sup> installment<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="bank_statement" name="bank_statement" type="file"
                                                     class="form-control-file border " accept="application/pdf">
@@ -508,7 +523,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">6.Document related to refund of interest earned on central share<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">7.Document related to refund of interest earned on central share<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="details_of_intrest_earn" name="details_of_intrest_earn"
                                                     type="file" class="form-control-file border "
@@ -524,7 +539,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">7. Status of utilization of matching share by the implementing agency, if any<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">8. Status of utilization of matching share by the implementing agency, if any<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="status_of_utilization" name="status_of_utilization"
                                                     type="file" class="form-control-file border "
@@ -540,7 +555,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">8. Site inspection report duly signed by competent authority<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">9. Site inspection report duly signed by competent authority<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="site_inspection_report" name="site_inspection_report"
                                                     type="file" class="form-control-file border " value=""
@@ -556,7 +571,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-7 control-label font-weight-bold">9. Colour Photographs of project site<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-7 control-label font-weight-bold">10. Colour Photographs of project site<span class="text-danger">*</span></label>
                                             <div class="col-sm-5">
                                                 <input id="color_photographs_of_project"
                                                     name="color_photographs_of_project" type="file"
@@ -909,7 +924,7 @@
                     </div>
                     <div class="">
                          <fieldset class="the-border p-2 mt-3 w-100">
-                            <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earned on central share</small></legend>
+                            <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earned on central share (in Rs.)</small></legend>
                             <div class="row">
                                 <!-- <div class="col-12">
                                     <div>
