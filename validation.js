@@ -7,6 +7,14 @@ $(document).ready(function () {
             $("#new_hostel").hide();
         }
     });
+    $('#hostel_id').on('change', function () {
+        if (this.value == '2') {
+            $("#new_hostel_state").show();
+        }
+        else {
+            $("#new_hostel_state").hide();
+        }
+    });
 });
 $(document).ready(function () {
     $("#form-check-hostel").click(function () {
@@ -254,13 +262,25 @@ $(document).ready(function () {
     $("#save").click(function () {
         var details_of_intrest_earn = $("#details_of_intrest_earn");
         if (details_of_intrest_earn.val() === "") {
-            document.getElementById("details_of_intrest_earn_message").innerHTML = "Details of Interest can not be Empty";
+            document.getElementById("details_of_intrest_earn_message").innerHTML = "Refund of interest earned can not be Empty";
             document.getElementById("details_of_intrest_earn_message").style.color = "red";
             document.getElementById("details_of_intrest_earn_message").style.margin = "20px";
             document.getElementById("details_of_intrest_earn_message").style.display = "block";
         }
         else {
             document.getElementById("details_of_intrest_earn_message").innerHTML = "";
+        }
+    });
+    $("#save").click(function () {
+        var construction1 = $("#construction_status_central");
+        if (construction1.val() === "") {
+            document.getElementById("construction_status_central-msg").innerHTML = "Construction Status can not be Empty";
+            document.getElementById("construction_status_central-msg").style.color = "red";
+            document.getElementById("construction_status_central-msg").style.margin = "20px";
+            document.getElementById("construction_status_central-msg").style.display = "block";
+        }
+        else {
+            document.getElementById("construction_status_central-msg").innerHTML = "";
         }
     });
     var myFile = "";
