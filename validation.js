@@ -66,27 +66,6 @@ $(document).ready(function () {
         }
     });
     $("#save").click(function () {
-        var village = $("#unspent_balance_of_central_share");
-        if (village.val() === "") {
-            document.getElementById("unspent_balance_of_central_share_message").innerHTML = "Central Share  can not be Empty";
-            document.getElementById("unspent_balance_of_central_share_message").style.display = "block";
-        }
-        else {
-            document.getElementById("unspent_balance_of_central_share_message").innerHTML = "";
-        }
-    });
-    $("#save").click(function () {
-        var village = $("#state_uni");
-        if (village.val() === "") {
-            document.getElementById("state_uni_message").innerHTML = " State/University can not be Empty";
-            document.getElementById("state_uni_message").style.width = "100%";
-            document.getElementById("state_uni_message").style.display = "block";
-        }
-        else {
-            document.getElementById("state_uni_message").innerHTML = "";
-        }
-    });
-    $("#save").click(function () {
         var financial_year = $("#financial_year");
         if (financial_year.val() === "") {
             document.getElementById("financial_year_message").innerHTML = "Financial Year can not be Empty";

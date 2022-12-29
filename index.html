@@ -265,7 +265,21 @@
                     <fieldset class="the-border p-2 mt-3 w-100">
                         <legend class="float-none w-auto p-2 field the-text-align"><small>Progress Report</small>
                         </legend>
-                        <label class="form-label font-weight-bold" for="central_assistance">Amount utilized
+                        <h5 class="font-weight-bold">A. Physical Progress</h5>
+                        <div class="col-md-6 ml-2">
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="group" class="col-sm-4 control-label font-weight-bold">Status of Construction<span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <textarea name="" id=""rows="3" class="form-control"></textarea>
+                                        <span class="m-1 error-message text-danger"
+                                            id="date_of_completion_message"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="font-weight-bold">B. Finicial Progress (in Rs.)</h5>
+                        <label class="form-label font-weight-bold ml-3" for="central_assistance">Amount utilized
                         </label>
                         <div class="row ml-2">
                             <!-- <label class="form-label font-weight-bold" for="central_assistance">Actual amount utilized
@@ -273,8 +287,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="row">
-                                        <label for="group" class="col-sm-4 control-label font-weight-bold">Central
-                                            Share in Rs<span class="text-danger">*</span></label>
+                                        <label for="group" class="col-sm-4 control-label font-weight-bold">Central Share<span class="text-danger">*</span></label>
                                         <div class="col-sm-6">
                                             <input id="actual_amt_Central_share" type="text"
                                                 placeholder="Central Share in Rs" class="form-control ">
@@ -288,8 +301,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <label for="group"
-                                            class="col-sm-6 control-label font-weight-bold">State/University
-                                            Share in Rs<span class="text-danger">*</span></label>
+                                            class="col-sm-6 control-label font-weight-bold">State/University Share<span class="text-danger">*</span></label>
                                         <div class="col-sm-6">
                                             <input id="central_assis_State_uni" type="text"
                                                 placeholder="State University Share ini Rs" class="form-control">
@@ -300,7 +312,7 @@
                                 </div>
                             </div>
                         </div>
-                        <label class="form-label font-weight-bold" for="central_assistance">Unspent balance of
+                        <!-- <label class="form-label font-weight-bold" for="central_assistance">Unspent balance of
                             central
                             assistance
                             up
@@ -336,29 +348,17 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-label font-weight-bold" for="Condetion">Whether necessary provision of
-                                fund has been  made for salary and other expenses related to deployment of wardens and guards for the hostel in case of girls hostel?
-                                <input type="checkbox" class="form-check-input ml-2" id="form-check-hostel" for="form-check-hostel">
-                            </label>
-                        </div>
-                        <div class="col-md-6 chkHostel" style="display: none;">
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <label for="group" class="col-sm-4 control-label font-weight-bold">Construction Status<span class="text-danger">*</span></label>
-                                            <div class="col-sm-6">
-                                                <input id="date_of_completion" name="date_of_completion" type="text" placeholder="Construction Status" class="form-control datepicker-4">
-                                                <span class="m-1 error-message text-danger"
-                                                    id="date_of_completion_message"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div> -->
+                                
                     </fieldset>
-                    <div class="chkHostel" style="display: none ">
+                    <div class="form-check mt-4">
+                        <label class="form-label font-weight-bold" for="Condetion">Whether necessary provision of fund has been  made for salary and other expenses related to deployment of wardens and guards for the hostel in case of girls hostel?
+                            <input type="checkbox" class="form-check-input ml-2" id="form-check-hostel" for="form-check-hostel">
+                        </label>
+                    </div>
+                    <div class="">
                          <fieldset class="the-border p-2 mt-3 w-100">
-                            <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earn </small></legend>
+                            <legend class="float-none w-auto p-2 field the-text-align"><small>Details of Interest earned on central share</small></legend>
                             <div class="row">
                                 <div class="col-12">
                                     <div>
@@ -376,9 +376,9 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Amount (in Rs)<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Total Interest Earn<span class="text-danger">*</span></label>
                                             <div class="col-sm-6">
-                                                <input id="amount" name="amount" type="number" placeholder="Amount" class="form-control ">
+                                                <input id="amount" name="amount" type="number" placeholder="Total Interest Earn" class="form-control ">
                                                 <span class="m-1 error-message text-danger"
                                                     id="financial_year_message"></span>
                                             </div>
@@ -388,11 +388,34 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Mode of Return & Details<span class="text-danger">*</span></label>
+                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Interest amount returned to Central Government<span class="text-danger">*</span></label>
                                             <div class="col-sm-6">
-                                                <input id="cheque_no" name="cheque_no" type="text"
-                                                    placeholder="Mode of return & Details" class="form-control ">
-                                                    <span class="text-danger"> <small>Document need to uploaded in  8th uploded section</small></span>
+                                                <input id="amount" name="amount" type="number" placeholder="Interest amount returned to Central Government" class="form-control ">
+                                                <span class="m-1 error-message text-danger"
+                                                    id="financial_year_message"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="group" class="col-sm-6 control-label font-weight-bold"> Mode of Return<span class="text-danger">*</span></label>
+                                            <div class="col-sm-6">
+                                                <input id="amount" name="amount" type="number" placeholder="Mode of Return" class="form-control ">
+                                                <span class="m-1 error-message text-danger"
+                                                    id="financial_year_message"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="group" class="col-sm-6 control-label font-weight-bold">Date of Return<span class="text-danger">*</span></label>
+                                            <div class="col-sm-6">
+                                                <input id="cheque_no" name="cheque_no" type="date"
+                                                    placeholder="" class="form-control ">
                                                 <span class="m-1 error-message text-danger"
                                                     id="cheque_no_message"></span>
                                             </div>
@@ -629,12 +652,11 @@
                             </div>
                         </fieldset>
                     </div>
-                    <div class="button1 chkHostel" style="display: none">
+                    <div class="button1">
                         <button type="button" id="save" class="btn btn-success mt-2" name="save">Save</button>
                     </div>
                 </form>
             </div>
         </div>
 </body>
-
 </html>
