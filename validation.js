@@ -16,15 +16,15 @@ $(document).ready(function () {
         }
     });
 });
-$(document).ready(function () {
-    $("#form-check-hostel").click(function () {
-        if ($(this).is(":checked")) {
-            $(".chkHostel").show();
-        } else {
-            $(".chkHostel").hide();
-        }
-    });
-});
+// $(document).ready(function () {
+//     $("#form-check-hostel").click(function () {
+//         if ($(this).is(":checked")) {
+//             $(".chkHostel").show();
+//         } else {
+//             $(".chkHostel").hide();
+//         }
+//     });
+// });
 $.validator.setDefaults({
     debug: true,
     success: "valid"
@@ -71,6 +71,16 @@ $(document).ready(function () {
         }
         else {
             document.getElementById("central_assis_State_uni_message").innerHTML = "";
+        }
+    });
+    $("#save").click(function () {
+        var expenses_radio = $("form-check-hostel");
+        if (expenses_radio.val() === "") {
+            document.getElementsByClassName("expenses_btn_msg").innerHTML = "Please Tick";
+            document.getElementsByClassName("expenses_btn_msg").style.display = "block";
+        }
+        else {
+            document.getElementById("expenses_btn_msg").innerHTML = "";
         }
     });
     $("#save").click(function () {
